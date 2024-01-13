@@ -42,7 +42,7 @@ namespace Shutdown_control
 
         private void btnlock_Click(object sender, EventArgs e)
         {
-            LockworkStation();
+           
         }
 
         private void btnsleep_Click(object sender, EventArgs e)
@@ -69,7 +69,12 @@ namespace Shutdown_control
 
         private void englishToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            lblTitle.Text = "";
+            lblTitle.Text = "Power controller";
+        }
+
+        private void amharicToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            lblTitle.Text = "ሀይል መቆጣጠርያ";
         }
     }
 }
