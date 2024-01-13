@@ -1,0 +1,9 @@
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\bin\Debug\Shutdown control.exe.config
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\bin\Debug\Shutdown control.exe
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\bin\Debug\Shutdown control.pdb
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\obj\Debug\Shutdown control.csprojResolveAssemblyReference.cache
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\obj\Debug\Shutdown_control.Form1.resources
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\obj\Debug\Shutdown_control.Properties.Resources.resources
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\obj\Debug\Shutdown control.csproj.GenerateResource.Cache
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\obj\Debug\Shutdown control.exe
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\obj\Debug\Shutdown control.pdb

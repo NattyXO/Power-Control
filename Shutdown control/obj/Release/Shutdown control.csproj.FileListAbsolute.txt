@@ -1,0 +1,19 @@
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\bin\Release\Shutdown control.exe.config
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\bin\Release\Shutdown control.exe
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\bin\Release\Shutdown control.pdb
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\obj\Release\Shutdown_control.Form1.resources
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\obj\Release\Shutdown_control.Properties.Resources.resources
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\obj\Release\Shutdown control.csproj.GenerateResource.Cache
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\obj\Release\Shutdown control.exe
+c:\users\sniper ras-mtat\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\obj\Release\Shutdown control.pdb
+C:\Users\SNIPER RAS-MTAT\documents\visual studio 2017\Projects\Shutdown control\Shutdown control\obj\Release\Shutdown control.csprojResolveAssemblyReference.cache
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\Shutdown control\Shutdown control\obj\Release\Shutdown control.csproj.AssemblyReference.cache
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\Shutdown control\Shutdown control\obj\Release\Shutdown_control.Form1.resources
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\Shutdown control\Shutdown control\obj\Release\Shutdown control.csproj.GenerateResource.cache
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\Shutdown control\Shutdown control\bin\Release\Shutdown control.exe.config
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\Shutdown control\Shutdown control\bin\Release\Shutdown control.exe
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\Shutdown control\Shutdown control\bin\Release\Shutdown control.pdb
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\Shutdown control\Shutdown control\obj\Release\Shutdown_control.Properties.Resources.resources
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\Shutdown control\Shutdown control\obj\Release\Shutdown control.csproj.CoreCompileInputs.cache
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\Shutdown control\Shutdown control\obj\Release\Shutdown control.exe
+C:\Users\NattyXO\Downloads\Visual Studio 2017\Projects\Shutdown control\Shutdown control\obj\Release\Shutdown control.pdb
