@@ -32,29 +32,29 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.englishToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.amharicToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.englishToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.amharicToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.picClose = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlHibernate = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlSwitchUser = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlRestart = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlSleep = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnlShutdown = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pnlDonate = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.pnlSignOut = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -64,13 +64,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.pnlHibernate.SuspendLayout();
+            this.pnlSwitchUser.SuspendLayout();
+            this.pnlRestart.SuspendLayout();
+            this.pnlSleep.SuspendLayout();
+            this.pnlShutdown.SuspendLayout();
+            this.pnlDonate.SuspendLayout();
+            this.pnlSignOut.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,12 +102,35 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
+            // languageToolStripMenuItem
+            // 
+            this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.englishToolStripMenuItem1,
+            this.amharicToolStripMenuItem1});
+            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+            this.languageToolStripMenuItem.Size = new System.Drawing.Size(71, 22);
+            this.languageToolStripMenuItem.Text = "Language";
+            // 
+            // englishToolStripMenuItem1
+            // 
+            this.englishToolStripMenuItem1.Name = "englishToolStripMenuItem1";
+            this.englishToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
+            this.englishToolStripMenuItem1.Text = "English";
+            this.englishToolStripMenuItem1.Click += new System.EventHandler(this.englishToolStripMenuItem1_Click);
+            // 
+            // amharicToolStripMenuItem1
+            // 
+            this.amharicToolStripMenuItem1.Name = "amharicToolStripMenuItem1";
+            this.amharicToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
+            this.amharicToolStripMenuItem1.Text = "Amharic";
+            this.amharicToolStripMenuItem1.Click += new System.EventHandler(this.amharicToolStripMenuItem1_Click);
+            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(53, 27);
+            this.lblTitle.Location = new System.Drawing.Point(54, 28);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(182, 31);
             this.lblTitle.TabIndex = 1;
@@ -116,7 +139,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(26, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(26, 1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(31, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -136,7 +159,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(25, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(25, 1);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(31, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -163,29 +186,6 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // languageToolStripMenuItem
-            // 
-            this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.englishToolStripMenuItem1,
-            this.amharicToolStripMenuItem1});
-            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-            this.languageToolStripMenuItem.Size = new System.Drawing.Size(71, 22);
-            this.languageToolStripMenuItem.Text = "Language";
-            // 
-            // englishToolStripMenuItem1
-            // 
-            this.englishToolStripMenuItem1.Name = "englishToolStripMenuItem1";
-            this.englishToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.englishToolStripMenuItem1.Text = "English";
-            this.englishToolStripMenuItem1.Click += new System.EventHandler(this.englishToolStripMenuItem1_Click);
-            // 
-            // amharicToolStripMenuItem1
-            // 
-            this.amharicToolStripMenuItem1.Name = "amharicToolStripMenuItem1";
-            this.amharicToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.amharicToolStripMenuItem1.Text = "Amharic";
-            this.amharicToolStripMenuItem1.Click += new System.EventHandler(this.amharicToolStripMenuItem1_Click);
-            // 
             // picClose
             // 
             this.picClose.BackColor = System.Drawing.Color.White;
@@ -196,16 +196,18 @@
             this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picClose.TabIndex = 13;
             this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
-            // panel1
+            // pnlHibernate
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(14, 135);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(82, 56);
-            this.panel1.TabIndex = 14;
+            this.pnlHibernate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.pnlHibernate.Controls.Add(this.label1);
+            this.pnlHibernate.Controls.Add(this.pictureBox1);
+            this.pnlHibernate.Location = new System.Drawing.Point(14, 135);
+            this.pnlHibernate.Name = "pnlHibernate";
+            this.pnlHibernate.Size = new System.Drawing.Size(82, 56);
+            this.pnlHibernate.TabIndex = 14;
+            this.pnlHibernate.Click += new System.EventHandler(this.pnlHibernate_Click);
             // 
             // label1
             // 
@@ -218,15 +220,16 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Hibernate";
             // 
-            // panel2
+            // pnlSwitchUser
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.pictureBox5);
-            this.panel2.Location = new System.Drawing.Point(107, 135);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(82, 56);
-            this.panel2.TabIndex = 15;
+            this.pnlSwitchUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.pnlSwitchUser.Controls.Add(this.label2);
+            this.pnlSwitchUser.Controls.Add(this.pictureBox5);
+            this.pnlSwitchUser.Location = new System.Drawing.Point(107, 135);
+            this.pnlSwitchUser.Name = "pnlSwitchUser";
+            this.pnlSwitchUser.Size = new System.Drawing.Size(82, 56);
+            this.pnlSwitchUser.TabIndex = 15;
+            this.pnlSwitchUser.Click += new System.EventHandler(this.pnlSwitchUser_Click);
             // 
             // label2
             // 
@@ -239,15 +242,16 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "ተጠቃሚ ቀይር";
             // 
-            // panel3
+            // pnlRestart
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Location = new System.Drawing.Point(200, 66);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(82, 56);
-            this.panel3.TabIndex = 16;
+            this.pnlRestart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.pnlRestart.Controls.Add(this.label3);
+            this.pnlRestart.Controls.Add(this.pictureBox4);
+            this.pnlRestart.Location = new System.Drawing.Point(200, 66);
+            this.pnlRestart.Name = "pnlRestart";
+            this.pnlRestart.Size = new System.Drawing.Size(82, 56);
+            this.pnlRestart.TabIndex = 16;
+            this.pnlRestart.Click += new System.EventHandler(this.pnlRestart_Click);
             // 
             // label3
             // 
@@ -260,36 +264,38 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "እንደገና ጀምር";
             // 
-            // panel4
+            // pnlSleep
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(107, 66);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(82, 56);
-            this.panel4.TabIndex = 16;
+            this.pnlSleep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.pnlSleep.Controls.Add(this.label4);
+            this.pnlSleep.Controls.Add(this.pictureBox2);
+            this.pnlSleep.Location = new System.Drawing.Point(107, 66);
+            this.pnlSleep.Name = "pnlSleep";
+            this.pnlSleep.Size = new System.Drawing.Size(82, 56);
+            this.pnlSleep.TabIndex = 16;
+            this.pnlSleep.Click += new System.EventHandler(this.pnlSleep_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(28, 34);
+            this.label4.Location = new System.Drawing.Point(28, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 20);
             this.label4.TabIndex = 13;
             this.label4.Text = "ተኛ";
             // 
-            // panel5
+            // pnlShutdown
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Location = new System.Drawing.Point(14, 66);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(82, 56);
-            this.panel5.TabIndex = 17;
+            this.pnlShutdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.pnlShutdown.Controls.Add(this.label5);
+            this.pnlShutdown.Controls.Add(this.pictureBox3);
+            this.pnlShutdown.Location = new System.Drawing.Point(14, 66);
+            this.pnlShutdown.Name = "pnlShutdown";
+            this.pnlShutdown.Size = new System.Drawing.Size(82, 56);
+            this.pnlShutdown.TabIndex = 17;
+            this.pnlShutdown.Click += new System.EventHandler(this.pnlShutdown_Click);
             // 
             // label5
             // 
@@ -302,14 +308,14 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "ዝጋው";
             // 
-            // panel6
+            // pnlDonate
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Location = new System.Drawing.Point(150, 201);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(133, 18);
-            this.panel6.TabIndex = 18;
+            this.pnlDonate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.pnlDonate.Controls.Add(this.label6);
+            this.pnlDonate.Location = new System.Drawing.Point(150, 201);
+            this.pnlDonate.Name = "pnlDonate";
+            this.pnlDonate.Size = new System.Drawing.Size(133, 18);
+            this.pnlDonate.TabIndex = 18;
             // 
             // label6
             // 
@@ -321,15 +327,16 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Donate by watching ads";
             // 
-            // panel7
+            // pnlSignOut
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Controls.Add(this.pictureBox6);
-            this.panel7.Location = new System.Drawing.Point(200, 135);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(82, 56);
-            this.panel7.TabIndex = 16;
+            this.pnlSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.pnlSignOut.Controls.Add(this.label7);
+            this.pnlSignOut.Controls.Add(this.pictureBox6);
+            this.pnlSignOut.Location = new System.Drawing.Point(200, 135);
+            this.pnlSignOut.Name = "pnlSignOut";
+            this.pnlSignOut.Size = new System.Drawing.Size(82, 56);
+            this.pnlSignOut.TabIndex = 16;
+            this.pnlSignOut.Click += new System.EventHandler(this.pnlSignOut_Click);
             // 
             // label7
             // 
@@ -359,13 +366,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(22)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(297, 228);
             this.ControlBox = false;
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlSignOut);
+            this.Controls.Add(this.pnlDonate);
+            this.Controls.Add(this.pnlSwitchUser);
+            this.Controls.Add(this.pnlShutdown);
+            this.Controls.Add(this.pnlSleep);
+            this.Controls.Add(this.pnlRestart);
+            this.Controls.Add(this.pnlHibernate);
             this.Controls.Add(this.picClose);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.menuStrip1);
@@ -389,20 +396,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.pnlHibernate.ResumeLayout(false);
+            this.pnlHibernate.PerformLayout();
+            this.pnlSwitchUser.ResumeLayout(false);
+            this.pnlSwitchUser.PerformLayout();
+            this.pnlRestart.ResumeLayout(false);
+            this.pnlRestart.PerformLayout();
+            this.pnlSleep.ResumeLayout(false);
+            this.pnlSleep.PerformLayout();
+            this.pnlShutdown.ResumeLayout(false);
+            this.pnlShutdown.PerformLayout();
+            this.pnlDonate.ResumeLayout(false);
+            this.pnlDonate.PerformLayout();
+            this.pnlSignOut.ResumeLayout(false);
+            this.pnlSignOut.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -424,19 +431,19 @@
         private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem amharicToolStripMenuItem1;
         private System.Windows.Forms.PictureBox picClose;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlHibernate;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlSwitchUser;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlRestart;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnlSleep;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnlShutdown;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pnlDonate;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel pnlSignOut;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox6;
     }
