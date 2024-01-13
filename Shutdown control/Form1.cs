@@ -25,8 +25,19 @@ namespace Shutdown_control
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool SetSuspendState(bool hibernate, bool forceCritical, bool disableWakeEvent);
 
-        [DllImport("Wtsapi32.dll", SetLastError = true)]
-        public static extern bool WTSLogoffSession(IntPtr hServer, int SessionId, bool bWait);
+        [DllImport("wtsapi32.dll", SetLastError = true)]
+        public static extern bool WTSDisconnectSession(IntPtr hServer, int sessionId, bool bWait);
+
+        [DllImport("Kernel32.dll")]
+        public static extern IntPtr WTSGetActiveConsoleSessionId();
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
 
         public Form1()
         {
@@ -53,28 +64,31 @@ namespace Shutdown_control
             lblSignOut.Text = "ዛግተ ውጣ";
             lblSignOut.Font = new Font("Microsoft Sans Serif", 8);
             lblSignOut.Location = new System.Drawing.Point(14, 37);
-            lblDonate.Text = "ማስታወቂያዎችን በመመልከት ይለግሱ";
+            lblDonate.Text = "ቡና ይግዙልኝ";
             lblDonate.Font = new Font("Microsoft Sans Serif", 8);
             lblDonate.Location = new System.Drawing.Point(4, 2);
-            pnlDonate.Size = new System.Drawing.Size(173, 18);
-            pnlDonate.Location = new System.Drawing.Point(118, 205);
+            pnlDonate.Size = new System.Drawing.Size(66, 18);
+            pnlDonate.Location = new System.Drawing.Point(224, 204);
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You window license expire soon", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            Application.Exit();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("expire soon", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string aboutMessage = "Power Controller 2024\n"+
+                "Version 1.0\n"+
+                "© 2024 Ahadu Tech\n"; 
+
+            MessageBox.Show(aboutMessage, "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
         private void englishToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            lblTitle.Text = "Power controller";
+            lblTitle.Text = "Power Controller";
             lblTitle.Location = new System.Drawing.Point(53, 27);
             lblTitle.Font = new Font("Microsoft Sans Serif", 18);
             lblShutdown.Text = "Shutdown";
@@ -92,11 +106,11 @@ namespace Shutdown_control
             lblSignOut.Text = "Sign Out";
             lblSignOut.Font = new Font("Microsoft Sans Serif", 8);
             lblSignOut.Location = new System.Drawing.Point(16, 39);
-            lblDonate.Text = "Donate by watching ads.";
+            lblDonate.Text = "Buy me a Coffe";
             lblDonate.Font = new Font("Microsoft Sans Serif", 8);
-            lblDonate.Location = new System.Drawing.Point(2, 2);
-            pnlDonate.Size = new System.Drawing.Size(127, 18);
-            pnlDonate.Location = new System.Drawing.Point(161, 205);
+            lblDonate.Location = new System.Drawing.Point(7, 2);
+            pnlDonate.Size = new System.Drawing.Size(90, 18);
+            pnlDonate.Location = new System.Drawing.Point(200, 204);
         }
 
         private void amharicToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -119,11 +133,11 @@ namespace Shutdown_control
             lblSignOut.Text = "ዛግተ ውጣ";
             lblSignOut.Font = new Font("Microsoft Sans Serif", 8);
             lblSignOut.Location = new System.Drawing.Point(14, 37);
-            lblDonate.Text = "ማስታወቂያዎችን በመመልከት ይለግሱ";
+            lblDonate.Text = "ቡና ይግዙልኝ";
             lblDonate.Font = new Font("Microsoft Sans Serif", 8);
             lblDonate.Location = new System.Drawing.Point(4, 2);
-            pnlDonate.Size = new System.Drawing.Size(173, 18);
-            pnlDonate.Location = new System.Drawing.Point(118, 205);
+            pnlDonate.Size = new System.Drawing.Size(66, 18);
+            pnlDonate.Location = new System.Drawing.Point(224, 204);
         }
 
         private void picClose_Click(object sender, EventArgs e)
@@ -151,19 +165,63 @@ namespace Shutdown_control
         {
             SetSuspendState(true, true, true); // Hibernate
         }
-
         private void pnlSwitchUser_Click(object sender, EventArgs e)
         {
-            // Provide the correct SessionId and handle for your situation
-            int sessionId = 1; // Example SessionId, adjust as needed
-            IntPtr serverHandle = IntPtr.Zero; // Use zero for the local server
-
-            WTSLogoffSession(serverHandle, sessionId, true);
+            SwitchUser();
         }
 
+        private void SwitchUser()
+        {
+            IntPtr sessionId = WTSGetActiveConsoleSessionId();
+            if (sessionId.ToInt32() != -1)
+            {
+                // Disconnect the current session (switch user)
+                WTSDisconnectSession(IntPtr.Zero, sessionId.ToInt32(), false);
+            }
+        }
         private void pnlSignOut_Click(object sender, EventArgs e)
         {
             ExitWindowsEx(0x00000000 | 0x00000004, 0); // Log off
+        }
+
+        private void pnlDonate_Click(object sender, EventArgs e)
+        {
+            string buyacoffe = "https://www.buymeacoffee.com/nattyxo";
+            Process.Start(buyacoffe);
+        }
+
+        private void menuStrip1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void picMinimized_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void picMinimized_MouseHover(object sender, EventArgs e)
+        {
+            picMinimized.BackColor = Color.FromArgb(224, 224, 224);
+        }
+
+        private void picMinimized_MouseLeave(object sender, EventArgs e)
+        {
+            picMinimized.BackColor = Color.FromArgb(255, 255, 255);
+        }
+
+        private void picClose_MouseHover(object sender, EventArgs e)
+        {
+            picClose.BackColor = Color.FromArgb(224, 224, 224);
+        }
+
+        private void picClose_MouseLeave(object sender, EventArgs e)
+        {
+            picClose.BackColor = Color.FromArgb(255, 255, 255);
         }
     }
 }

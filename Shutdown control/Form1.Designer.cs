@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,6 +57,7 @@
             this.pnlSignOut = new System.Windows.Forms.Panel();
             this.lblSignOut = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.picMinimized = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -72,13 +73,14 @@
             this.pnlDonate.SuspendLayout();
             this.pnlSignOut.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimized)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.helpToolStripMenuItem,
+            this.exitToolStripMenuItem,
             this.aboutToolStripMenuItem,
             this.languageToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -87,13 +89,14 @@
             this.menuStrip1.Size = new System.Drawing.Size(297, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuStrip1_MouseDown);
             // 
-            // helpToolStripMenuItem
+            // exitToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
-            this.helpToolStripMenuItem.Text = "Help";
-            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -130,11 +133,11 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(40, 27);
+            this.lblTitle.Location = new System.Drawing.Point(31, 27);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(226, 31);
+            this.lblTitle.Size = new System.Drawing.Size(232, 31);
             this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "Power controller";
+            this.lblTitle.Text = "Power Controller";
             // 
             // pictureBox2
             // 
@@ -160,6 +163,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Enabled = false;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(24, 2);
             this.pictureBox4.Name = "pictureBox4";
@@ -170,6 +174,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Enabled = false;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(26, 2);
             this.pictureBox5.Name = "pictureBox5";
@@ -180,6 +185,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(24, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -199,6 +205,8 @@
             this.picClose.TabIndex = 13;
             this.picClose.TabStop = false;
             this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            this.picClose.MouseLeave += new System.EventHandler(this.picClose_MouseLeave);
+            this.picClose.MouseHover += new System.EventHandler(this.picClose_MouseHover);
             // 
             // pnlHibernate
             // 
@@ -312,22 +320,24 @@
             // 
             // pnlDonate
             // 
-            this.pnlDonate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.pnlDonate.BackColor = System.Drawing.Color.Silver;
             this.pnlDonate.Controls.Add(this.lblDonate);
-            this.pnlDonate.Location = new System.Drawing.Point(118, 205);
+            this.pnlDonate.Location = new System.Drawing.Point(224, 204);
             this.pnlDonate.Name = "pnlDonate";
-            this.pnlDonate.Size = new System.Drawing.Size(173, 18);
+            this.pnlDonate.Size = new System.Drawing.Size(67, 18);
             this.pnlDonate.TabIndex = 18;
+            this.pnlDonate.Click += new System.EventHandler(this.pnlDonate_Click);
             // 
             // lblDonate
             // 
             this.lblDonate.AutoSize = true;
+            this.lblDonate.Enabled = false;
             this.lblDonate.ForeColor = System.Drawing.Color.White;
-            this.lblDonate.Location = new System.Drawing.Point(2, 2);
+            this.lblDonate.Location = new System.Drawing.Point(4, 2);
             this.lblDonate.Name = "lblDonate";
-            this.lblDonate.Size = new System.Drawing.Size(167, 13);
+            this.lblDonate.Size = new System.Drawing.Size(61, 13);
             this.lblDonate.TabIndex = 0;
-            this.lblDonate.Text = "ማስታወቂያዎችን በመመልከት ይለግሱ";
+            this.lblDonate.Text = "ቡና ይግዙልኝ";
             // 
             // pnlSignOut
             // 
@@ -353,6 +363,7 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Enabled = false;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(25, 2);
             this.pictureBox6.Name = "pictureBox6";
@@ -361,6 +372,20 @@
             this.pictureBox6.TabIndex = 10;
             this.pictureBox6.TabStop = false;
             // 
+            // picMinimized
+            // 
+            this.picMinimized.BackColor = System.Drawing.Color.White;
+            this.picMinimized.Image = ((System.Drawing.Image)(resources.GetObject("picMinimized.Image")));
+            this.picMinimized.Location = new System.Drawing.Point(225, 0);
+            this.picMinimized.Name = "picMinimized";
+            this.picMinimized.Size = new System.Drawing.Size(31, 24);
+            this.picMinimized.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picMinimized.TabIndex = 19;
+            this.picMinimized.TabStop = false;
+            this.picMinimized.Click += new System.EventHandler(this.picMinimized_Click);
+            this.picMinimized.MouseLeave += new System.EventHandler(this.picMinimized_MouseLeave);
+            this.picMinimized.MouseHover += new System.EventHandler(this.picMinimized_MouseHover);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,6 +393,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(22)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(297, 228);
             this.ControlBox = false;
+            this.Controls.Add(this.picMinimized);
             this.Controls.Add(this.pnlSignOut);
             this.Controls.Add(this.pnlDonate);
             this.Controls.Add(this.pnlSwitchUser);
@@ -413,6 +439,7 @@
             this.pnlSignOut.ResumeLayout(false);
             this.pnlSignOut.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimized)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,7 +448,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -448,6 +475,7 @@
         private System.Windows.Forms.Panel pnlSignOut;
         private System.Windows.Forms.Label lblSignOut;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox picMinimized;
     }
 }
 

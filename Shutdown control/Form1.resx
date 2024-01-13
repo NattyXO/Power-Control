@@ -651,6 +651,14 @@
         FmnqX3+rK/0s0tXhqhIXofEoFEAgEAgESkqvXv8BNlh2N8lIxPgAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="picMinimized.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAABSSURBVHhe7c5BDQAwDAOx8ifdEQiAarGl+98AAAAAAAAA
+        AAAAAAAAAAAAAABAiS3vnDTZ1Dlpsqlz0mRTAAAAAAAAAAAAAAAAAAAAAAAA8LmZB16N/wH3/tMqAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>45</value>
   </metadata>
