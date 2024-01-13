@@ -35,7 +35,29 @@ namespace Shutdown_control
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            lblTitle.Text = "ሀይል መቆጣጠርያ";
+            lblTitle.Location = new System.Drawing.Point(56, 28);
+            lblTitle.Font = new Font("Microsoft Sans Serif", 20, FontStyle.Bold);
+            lblShutdown.Text = "ዝጋው";
+            lblShutdown.Font = new Font("Microsoft Sans Serif", 8);
+            lblShutdown.Location = new System.Drawing.Point(24, 38);
+            lblSleep.Text = "ተኛ";
+            lblSleep.Font = new Font("Microsoft Sans Serif", 8);
+            lblSleep.Location = new System.Drawing.Point(28, 38);
+            lblRestart.Text = "እንደገና ጀምር";
+            lblRestart.Font = new Font("Microsoft Sans Serif", 8);
+            lblRestart.Location = new System.Drawing.Point(6, 36);
+            lblSwitchUser.Text = "ተጠቃሚ ቀይር";
+            lblSwitchUser.Font = new Font("Microsoft Sans Serif", 8);
+            lblSwitchUser.Location = new System.Drawing.Point(6, 37);
+            lblSignOut.Text = "ዛግተ ውጣ";
+            lblSignOut.Font = new Font("Microsoft Sans Serif", 8);
+            lblSignOut.Location = new System.Drawing.Point(14, 37);
+            lblDonate.Text = "ማስታወቂያዎችን በመመልከት ይለግሱ";
+            lblDonate.Font = new Font("Microsoft Sans Serif", 8);
+            lblDonate.Location = new System.Drawing.Point(4, 2);
+            pnlDonate.Size = new System.Drawing.Size(173, 18);
+            pnlDonate.Location = new System.Drawing.Point(118, 205);
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,8 +75,28 @@ namespace Shutdown_control
         private void englishToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Power controller";
-            lblTitle.Location = new System.Drawing.Point(48, 27);
-            lblTitle.Font = new Font(lblTitle.Font.FontFamily, 18);
+            lblTitle.Location = new System.Drawing.Point(53, 27);
+            lblTitle.Font = new Font("Microsoft Sans Serif", 18);
+            lblShutdown.Text = "Shutdown";
+            lblShutdown.Font = new Font("Microsoft Sans Serif", 8);
+            lblShutdown.Location = new System.Drawing.Point(13, 37);
+            lblSleep.Text = "Sleep";
+            lblSleep.Font = new Font("Microsoft Sans Serif", 8);
+            lblSleep.Location = new System.Drawing.Point(23, 37);
+            lblRestart.Text = "Restart";
+            lblRestart.Font = new Font("Microsoft Sans Serif", 8);
+            lblRestart.Location = new System.Drawing.Point(18, 37);
+            lblSwitchUser.Text = "Switch User";
+            lblSwitchUser.Font = new Font("Microsoft Sans Serif", 8);
+            lblSwitchUser.Location = new System.Drawing.Point(9, 39);
+            lblSignOut.Text = "Sign Out";
+            lblSignOut.Font = new Font("Microsoft Sans Serif", 8);
+            lblSignOut.Location = new System.Drawing.Point(16, 39);
+            lblDonate.Text = "Donate by watching ads.";
+            lblDonate.Font = new Font("Microsoft Sans Serif", 8);
+            lblDonate.Location = new System.Drawing.Point(2, 2);
+            pnlDonate.Size = new System.Drawing.Size(127, 18);
+            pnlDonate.Location = new System.Drawing.Point(161, 205);
         }
 
         private void amharicToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -62,6 +104,26 @@ namespace Shutdown_control
             lblTitle.Text = "ሀይል መቆጣጠርያ";
             lblTitle.Location = new System.Drawing.Point(56, 28);
             lblTitle.Font = new Font("Microsoft Sans Serif", 20, FontStyle.Bold);
+            lblShutdown.Text = "ዝጋው";
+            lblShutdown.Font = new Font("Microsoft Sans Serif", 8);
+            lblShutdown.Location = new System.Drawing.Point(24, 38);
+            lblSleep.Text = "ተኛ";
+            lblSleep.Font = new Font("Microsoft Sans Serif", 8);
+            lblSleep.Location = new System.Drawing.Point(28, 38);
+            lblRestart.Text = "እንደገና ጀምር";
+            lblRestart.Font = new Font("Microsoft Sans Serif", 8);
+            lblRestart.Location = new System.Drawing.Point(6, 36);
+            lblSwitchUser.Text = "ተጠቃሚ ቀይር";
+            lblSwitchUser.Font = new Font("Microsoft Sans Serif", 8);
+            lblSwitchUser.Location = new System.Drawing.Point(6, 37);
+            lblSignOut.Text = "ዛግተ ውጣ";
+            lblSignOut.Font = new Font("Microsoft Sans Serif", 8);
+            lblSignOut.Location = new System.Drawing.Point(14, 37);
+            lblDonate.Text = "ማስታወቂያዎችን በመመልከት ይለግሱ";
+            lblDonate.Font = new Font("Microsoft Sans Serif", 8);
+            lblDonate.Location = new System.Drawing.Point(4, 2);
+            pnlDonate.Size = new System.Drawing.Size(173, 18);
+            pnlDonate.Location = new System.Drawing.Point(118, 205);
         }
 
         private void picClose_Click(object sender, EventArgs e)

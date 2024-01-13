@@ -43,19 +43,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.pnlHibernate = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblHibernate = new System.Windows.Forms.Label();
             this.pnlSwitchUser = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSwitchUser = new System.Windows.Forms.Label();
             this.pnlRestart = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblRestart = new System.Windows.Forms.Label();
             this.pnlSleep = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblSleep = new System.Windows.Forms.Label();
             this.pnlShutdown = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblShutdown = new System.Windows.Forms.Label();
             this.pnlDonate = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblDonate = new System.Windows.Forms.Label();
             this.pnlSignOut = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblSignOut = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -130,16 +130,17 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(54, 28);
+            this.lblTitle.Location = new System.Drawing.Point(40, 27);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(182, 31);
+            this.lblTitle.Size = new System.Drawing.Size(226, 31);
             this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "ሀይል መቆጣጠርያ";
+            this.lblTitle.Text = "Power controller";
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Enabled = false;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(26, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(27, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(31, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -148,8 +149,9 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Enabled = false;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(27, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(26, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(31, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -159,7 +161,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(25, 1);
+            this.pictureBox4.Location = new System.Drawing.Point(24, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(31, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -169,7 +171,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(26, 0);
+            this.pictureBox5.Location = new System.Drawing.Point(26, 2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(31, 32);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -179,7 +181,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,7 +203,7 @@
             // pnlHibernate
             // 
             this.pnlHibernate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.pnlHibernate.Controls.Add(this.label1);
+            this.pnlHibernate.Controls.Add(this.lblHibernate);
             this.pnlHibernate.Controls.Add(this.pictureBox1);
             this.pnlHibernate.Location = new System.Drawing.Point(14, 135);
             this.pnlHibernate.Name = "pnlHibernate";
@@ -209,21 +211,21 @@
             this.pnlHibernate.TabIndex = 14;
             this.pnlHibernate.Click += new System.EventHandler(this.pnlHibernate_Click);
             // 
-            // label1
+            // lblHibernate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(11, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 15);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Hibernate";
+            this.lblHibernate.AutoSize = true;
+            this.lblHibernate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHibernate.ForeColor = System.Drawing.Color.White;
+            this.lblHibernate.Location = new System.Drawing.Point(11, 37);
+            this.lblHibernate.Name = "lblHibernate";
+            this.lblHibernate.Size = new System.Drawing.Size(61, 15);
+            this.lblHibernate.TabIndex = 13;
+            this.lblHibernate.Text = "Hibernate";
             // 
             // pnlSwitchUser
             // 
             this.pnlSwitchUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.pnlSwitchUser.Controls.Add(this.label2);
+            this.pnlSwitchUser.Controls.Add(this.lblSwitchUser);
             this.pnlSwitchUser.Controls.Add(this.pictureBox5);
             this.pnlSwitchUser.Location = new System.Drawing.Point(107, 135);
             this.pnlSwitchUser.Name = "pnlSwitchUser";
@@ -231,21 +233,21 @@
             this.pnlSwitchUser.TabIndex = 15;
             this.pnlSwitchUser.Click += new System.EventHandler(this.pnlSwitchUser_Click);
             // 
-            // label2
+            // lblSwitchUser
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(4, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "ተጠቃሚ ቀይር";
+            this.lblSwitchUser.AutoSize = true;
+            this.lblSwitchUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSwitchUser.ForeColor = System.Drawing.Color.White;
+            this.lblSwitchUser.Location = new System.Drawing.Point(5, 37);
+            this.lblSwitchUser.Name = "lblSwitchUser";
+            this.lblSwitchUser.Size = new System.Drawing.Size(72, 15);
+            this.lblSwitchUser.TabIndex = 13;
+            this.lblSwitchUser.Text = "Switch User";
             // 
             // pnlRestart
             // 
             this.pnlRestart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.pnlRestart.Controls.Add(this.label3);
+            this.pnlRestart.Controls.Add(this.lblRestart);
             this.pnlRestart.Controls.Add(this.pictureBox4);
             this.pnlRestart.Location = new System.Drawing.Point(200, 66);
             this.pnlRestart.Name = "pnlRestart";
@@ -253,21 +255,21 @@
             this.pnlRestart.TabIndex = 16;
             this.pnlRestart.Click += new System.EventHandler(this.pnlRestart_Click);
             // 
-            // label3
+            // lblRestart
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(6, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "እንደገና ጀምር";
+            this.lblRestart.AutoSize = true;
+            this.lblRestart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRestart.ForeColor = System.Drawing.Color.White;
+            this.lblRestart.Location = new System.Drawing.Point(16, 37);
+            this.lblRestart.Name = "lblRestart";
+            this.lblRestart.Size = new System.Drawing.Size(46, 15);
+            this.lblRestart.TabIndex = 13;
+            this.lblRestart.Text = "Restart";
             // 
             // pnlSleep
             // 
             this.pnlSleep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.pnlSleep.Controls.Add(this.label4);
+            this.pnlSleep.Controls.Add(this.lblSleep);
             this.pnlSleep.Controls.Add(this.pictureBox2);
             this.pnlSleep.Location = new System.Drawing.Point(107, 66);
             this.pnlSleep.Name = "pnlSleep";
@@ -275,21 +277,21 @@
             this.pnlSleep.TabIndex = 16;
             this.pnlSleep.Click += new System.EventHandler(this.pnlSleep_Click);
             // 
-            // label4
+            // lblSleep
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(28, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 20);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "ተኛ";
+            this.lblSleep.AutoSize = true;
+            this.lblSleep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSleep.ForeColor = System.Drawing.Color.White;
+            this.lblSleep.Location = new System.Drawing.Point(23, 37);
+            this.lblSleep.Name = "lblSleep";
+            this.lblSleep.Size = new System.Drawing.Size(39, 15);
+            this.lblSleep.TabIndex = 13;
+            this.lblSleep.Text = "Sleep";
             // 
             // pnlShutdown
             // 
             this.pnlShutdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.pnlShutdown.Controls.Add(this.label5);
+            this.pnlShutdown.Controls.Add(this.lblShutdown);
             this.pnlShutdown.Controls.Add(this.pictureBox3);
             this.pnlShutdown.Location = new System.Drawing.Point(14, 66);
             this.pnlShutdown.Name = "pnlShutdown";
@@ -297,40 +299,40 @@
             this.pnlShutdown.TabIndex = 17;
             this.pnlShutdown.Click += new System.EventHandler(this.pnlShutdown_Click);
             // 
-            // label5
+            // lblShutdown
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(24, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 20);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "ዝጋው";
+            this.lblShutdown.AutoSize = true;
+            this.lblShutdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShutdown.ForeColor = System.Drawing.Color.White;
+            this.lblShutdown.Location = new System.Drawing.Point(11, 37);
+            this.lblShutdown.Name = "lblShutdown";
+            this.lblShutdown.Size = new System.Drawing.Size(62, 15);
+            this.lblShutdown.TabIndex = 13;
+            this.lblShutdown.Text = "Shutdown";
             // 
             // pnlDonate
             // 
             this.pnlDonate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.pnlDonate.Controls.Add(this.label6);
-            this.pnlDonate.Location = new System.Drawing.Point(150, 201);
+            this.pnlDonate.Controls.Add(this.lblDonate);
+            this.pnlDonate.Location = new System.Drawing.Point(118, 205);
             this.pnlDonate.Name = "pnlDonate";
-            this.pnlDonate.Size = new System.Drawing.Size(133, 18);
+            this.pnlDonate.Size = new System.Drawing.Size(173, 18);
             this.pnlDonate.TabIndex = 18;
             // 
-            // label6
+            // lblDonate
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(9, 2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Donate by watching ads";
+            this.lblDonate.AutoSize = true;
+            this.lblDonate.ForeColor = System.Drawing.Color.White;
+            this.lblDonate.Location = new System.Drawing.Point(2, 2);
+            this.lblDonate.Name = "lblDonate";
+            this.lblDonate.Size = new System.Drawing.Size(167, 13);
+            this.lblDonate.TabIndex = 0;
+            this.lblDonate.Text = "ማስታወቂያዎችን በመመልከት ይለግሱ";
             // 
             // pnlSignOut
             // 
             this.pnlSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.pnlSignOut.Controls.Add(this.label7);
+            this.pnlSignOut.Controls.Add(this.lblSignOut);
             this.pnlSignOut.Controls.Add(this.pictureBox6);
             this.pnlSignOut.Location = new System.Drawing.Point(200, 135);
             this.pnlSignOut.Name = "pnlSignOut";
@@ -338,21 +340,21 @@
             this.pnlSignOut.TabIndex = 16;
             this.pnlSignOut.Click += new System.EventHandler(this.pnlSignOut_Click);
             // 
-            // label7
+            // lblSignOut
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(13, 35);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 20);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "ዛግተ ውጣ";
+            this.lblSignOut.AutoSize = true;
+            this.lblSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSignOut.ForeColor = System.Drawing.Color.White;
+            this.lblSignOut.Location = new System.Drawing.Point(13, 37);
+            this.lblSignOut.Name = "lblSignOut";
+            this.lblSignOut.Size = new System.Drawing.Size(54, 15);
+            this.lblSignOut.TabIndex = 13;
+            this.lblSignOut.Text = "Sign Out";
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(26, 0);
+            this.pictureBox6.Location = new System.Drawing.Point(25, 2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(31, 32);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -432,19 +434,19 @@
         private System.Windows.Forms.ToolStripMenuItem amharicToolStripMenuItem1;
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.Panel pnlHibernate;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHibernate;
         private System.Windows.Forms.Panel pnlSwitchUser;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSwitchUser;
         private System.Windows.Forms.Panel pnlRestart;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblRestart;
         private System.Windows.Forms.Panel pnlSleep;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblSleep;
         private System.Windows.Forms.Panel pnlShutdown;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblShutdown;
         private System.Windows.Forms.Panel pnlDonate;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblDonate;
         private System.Windows.Forms.Panel pnlSignOut;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblSignOut;
         private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
